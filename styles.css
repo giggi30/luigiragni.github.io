@@ -8,7 +8,6 @@
 :root {
     --primary-color: #2c3e50;
     --secondary-color: #3498db;
-    --accent-color: #e74c3c;
     --text-color: #333;
     --light-bg: #f8f9fa;
     --white: #ffffff;
@@ -27,6 +26,22 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+/* Skip Link for Accessibility */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 8px 16px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
 }
 
 /* Header and Navigation */
@@ -64,8 +79,11 @@ nav h1 {
     transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a:focus {
     color: var(--secondary-color);
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 4px;
 }
 
 /* Hero Section */
@@ -229,7 +247,8 @@ nav h1 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.study-item:hover {
+.study-item:hover,
+.study-item:focus-within {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
@@ -272,7 +291,8 @@ nav h1 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.aspiration-item:hover {
+.aspiration-item:hover,
+.aspiration-item:focus-within {
     transform: translateY(-5px);
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
@@ -309,8 +329,11 @@ footer {
     transition: color 0.3s ease;
 }
 
-.footer-links a:hover {
+.footer-links a:hover,
+.footer-links a:focus {
     color: var(--secondary-color);
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 4px;
 }
 
 /* Responsive Design */

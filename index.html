@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio personale di Luigi Ragni, studente di Software Technologies presso l'Università degli Studi del Molise. Curriculum, esperienze lavorative, percorso universitario e aspirazioni professionali.">
     <title>Luigi Ragni - Portfolio Personale</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Vai al contenuto principale</a>
     <header>
         <nav>
             <div class="container">
@@ -21,7 +23,7 @@
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
         <!-- Hero Section -->
         <section class="hero">
             <div class="container">
@@ -151,7 +153,7 @@
                 <h2 class="section-title">Aspirazioni e Obiettivi</h2>
                 <div class="aspirations-content">
                     <div class="aspiration-item">
-                        <h3>🎓 Obiettivi Accademici</h3>
+                        <h3><span aria-hidden="true">🎓</span> Obiettivi Accademici</h3>
                         <p>
                             Completare con successo la laurea triennale in Software Technologies, 
                             acquisendo competenze solide e approfondite nello sviluppo software. 
@@ -160,17 +162,17 @@
                     </div>
                     
                     <div class="aspiration-item">
-                        <h3>💼 Obiettivi Professionali</h3>
+                        <h3><span aria-hidden="true">💼</span> Obiettivi Professionali</h3>
                         <p>
                             Entrare nel mondo del lavoro come sviluppatore software, contribuendo 
-                            a progetti significativi e innovativi. Aspirare a diventare un professionista 
+                            a progetti significativi e innovativi. Aspiro a diventare un professionista 
                             riconosciuto nel campo dello sviluppo software, con competenze in tecnologie 
                             moderne e capacità di problem solving.
                         </p>
                     </div>
                     
                     <div class="aspiration-item">
-                        <h3>🚀 Crescita Continua</h3>
+                        <h3><span aria-hidden="true">🚀</span> Crescita Continua</h3>
                         <p>
                             Continuare ad apprendere e aggiornarmi costantemente sulle nuove tecnologie 
                             e metodologie di sviluppo. Partecipare a progetti open source, collaborare 
@@ -179,9 +181,9 @@
                     </div>
                     
                     <div class="aspiration-item">
-                        <h3>🌟 Visione Futura</h3>
+                        <h3><span aria-hidden="true">🌟</span> Visione Futura</h3>
                         <p>
-                            A lungo termine, aspirare a lavorare su progetti che abbiano un impatto 
+                            A lungo termine, aspiro a lavorare su progetti che abbiano un impatto 
                             positivo sulla società, utilizzando la tecnologia per risolvere problemi 
                             reali. Desidero specializzarmi in aree come l'intelligenza artificiale, 
                             il cloud computing o lo sviluppo di applicazioni scalabili.
@@ -194,11 +196,14 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Luigi Ragni. Tutti i diritti riservati.</p>
+            <p>&copy; <span id="current-year"></span> Luigi Ragni. Tutti i diritti riservati.</p>
             <div class="footer-links">
-                <a href="https://github.com/giggi30" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://github.com/giggi30" target="_blank" rel="noopener noreferrer" aria-label="GitHub (apre in una nuova scheda)">GitHub</a>
             </div>
         </div>
     </footer>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
