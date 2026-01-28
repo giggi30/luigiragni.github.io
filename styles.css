@@ -79,7 +79,10 @@ nav h1 {
     transition: color 0.3s ease;
 }
 
-.nav-links a:hover,
+.nav-links a:hover {
+    color: var(--secondary-color);
+}
+
 .nav-links a:focus {
     color: var(--secondary-color);
     outline: 2px solid var(--secondary-color);
@@ -329,7 +332,10 @@ footer {
     transition: color 0.3s ease;
 }
 
-.footer-links a:hover,
+.footer-links a:hover {
+    color: var(--secondary-color);
+}
+
 .footer-links a:focus {
     color: var(--secondary-color);
     outline: 2px solid var(--secondary-color);
